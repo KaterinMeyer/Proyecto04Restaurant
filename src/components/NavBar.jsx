@@ -1,22 +1,25 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './NavBar.css';
+import logo from'../img/letter.png'
+
+
 export const NavBar = () => {
-    const navStyles = {
-        color: "#fff"
-    }
+
     return (
-        <nav>
-            <Link to={"/"} style={navStyles}>
-                <h2>Logo</h2>
+        <nav className="NavStyle">
+            <Link to={"/"}>
+            <div className="logo">München</div>
             </Link>
+
             <ul className="nav-list">
-            <Link to={"/about"} style={navStyles}>
+            <Link to={"/about"}>
                 <li>Sobre Nosotros</li>
             </Link>
-            <Link to={"/Menu"} style={navStyles}>
+            <Link to={"/Menu"}>
                 <li>Menú</li>
             </Link>
-            <Link to={"/Reservas"} style={navStyles}>
+            <Link to={"/Reservas"}>
                 <li>Reservas</li>
             </Link>
         </ul>

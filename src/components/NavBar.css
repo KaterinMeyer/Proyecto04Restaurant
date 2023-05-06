@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,400&family=Signika:wght@500&family=UnifrakturCook:wght@700&display=swap');
+
+.NavStyle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #778DA9;
+    padding: 10px 20px;
+    height: 60px;
+    font-family: 'UnifrakturCook', cursive;
+    
+}
+
+.logo {
+color: black;
+font-size: 40px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: 27px;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-right: 20px;
+}
+
+.nav-list li {
+    margin: 10px;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.NavStyle h2 {
+    margin: 0;
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    .NavStyle {
+        height: 40px;
+        text-align: center;
+    }
+
+    .nav-list {
+        margin: 0px 0;
+        font-size: 15px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-list li {
+        margin: 0px 0;
+    }
+}

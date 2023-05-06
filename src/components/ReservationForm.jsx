@@ -65,7 +65,7 @@ function ReservationForm() {
     return (
         <form className="reservation-form" onSubmit={handleSubmit}>
             <label htmlFor="name">Nombre y Apellido</label>
-            <input type="text" id="name" value={name} onChange={(event) => {
+            <input type="text" id="name" placeholder='Nombre y Apellido'value={name} onChange={(event) => {
                 setName(event.target.value);
                 setNameEmpty(event.target.value === "");
             }}
@@ -73,7 +73,7 @@ function ReservationForm() {
             />
 
             <label htmlFor="email">Correo</label>
-            <input type="email" id="email" value={email} onChange={(event) => {
+            <input type="email" id="email" placeholder='nombre@correo.com' value={email} onChange={(event) => {
                 setEmail(event.target.value);
                 setEmailEmpty(event.target.value === "");
             }}
@@ -81,7 +81,7 @@ function ReservationForm() {
             />
 
             <label htmlFor="phone">Teléfono de Contacto</label>
-            <input type="tel" id="phone" value={phone} onChange={(event) => {
+            <input type="tel" id="phone" placeholder='+56 9 XXXX XXX'value={phone} onChange={(event) => {
                 setPhone(event.target.value);
                 setPhoneEmpty(event.target.value === "");
             }}
@@ -97,6 +97,7 @@ function ReservationForm() {
             />
 
             <label htmlFor="time">Hora</label>
+            <div>desde las 12 hrs hasta las 22 hrs</div>
             <input type="time" id="time" min={minTime} max={maxTime} value={time} onChange={(event) => {
                 setTime(event.target.value);
                 setTimeEmpty(event.target.value === "");
@@ -104,6 +105,7 @@ function ReservationForm() {
                 className={timeEmpty ? "form-control empty" : "form-control"}
             />
             <label htmlFor="guests">Comensales</label>
+            <div>mínimo 2, máximo 10 personas por reserva</div>
             <input type="number" id="guests" value={guests} onChange={(event) => {
                 setGuests(event.target.value);
                 setGuestsEmpty(event.target.value === "");
@@ -112,6 +114,7 @@ function ReservationForm() {
                 max="10"
                 className={guestsEmpty ? "form-control empty" : "form-control"}
             />
+            
             <button type="submit">Reservar</button>
         </form>
     );

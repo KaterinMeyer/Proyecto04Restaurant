@@ -1,10 +1,13 @@
 import React from 'react'
+import "./About.css"
+import "./main.css"
+import fotoantigua from '../img/restauranteantiguo.jpg'
 
 export const About = () => {
     return (
         <>
-            <h1>Sobre Nosotros</h1>
-            <h4>El Restaurant München se instaló hace más 60 años en Chile y ha sido un punto de referencia para los amantes de la comida alemana en el país. 
+            <h1 className="titulo">Sobre Nosotros</h1>
+            <h4 className="texto">El Restaurant München se instaló hace más 60 años en Chile y ha sido un punto de referencia para los amantes de la comida alemana en el país. 
                 Con una decoración tradicional y acogedora, el restaurante ofrece un ambiente cálido y familiar que hace que los clientes disfruten de los 
                 clásicos platos alemanes y de sus cervezas. 
 
@@ -19,6 +22,7 @@ export const About = () => {
                 El servicio es profesional, amable y atento, y el personal está siempre dispuesto a proporcionar recomendaciones y 
                 asesoramiento a los clientes para garantizar una experiencia gastronómica excepcional. En resumen, el Restaurant München
                 es un destino obligatorio para aquellos que buscan una auténtica experiencia gastronómica alemana en Chile.</h4>
+        <img id="fotoantigua" src={fotoantigua} alt="Restaurante Antiguo" />
         </>
     )
 };

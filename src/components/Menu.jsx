@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Menu.css"
+import "./main.css"
 import brezel from '../img/Brezel.jpg'
 import goulasch from '../img/Goulasch.jpg'
 import jager from '../img/Jägerschnitzel.jpg'
@@ -42,24 +43,25 @@ export const Menu = () => {
   ];
 
   return (
-    <div className="menu">
-      <h2 className="tituloMenu">Menu</h2>
-      <ul>
-        {menuItems.map((item, index) => (
-          <div className="menu-item" key={item.name}>
-            <div className="menu-item-image">
-              <img src={item.image} alt={item.name} />
+    <>
+      <h2 className="titulo">Menu</h2>
+      <div className="menu">
+        <ul>
+          {menuItems.map((item, index) => (
+            <div className="menu-item" key={item.name}>
+              <div className="menu-item-image">
+                <img src={item.image} alt={item.name} />
+              </div>
+              <div className="menu-item-details">
+                <h2 className="menu-item-name">{item.name}</h2>
+                <p className="menu-item-description">{item.description}</p>
+                <span className="menu-item-price">${item.price}</span>
+              </div>
             </div>
-            <div className="menu-item-details">
-              <h2 className="menu-item-name">{item.name}</h2>
-              <p className="menu-item-description">{item.description}</p>
-              <span className="menu-item-price">${item.price}</span>
-            </div>
-          </div>
-        ))}
-      </ul>
-    </div>
-  );
+          ))}
+        </ul>
+      </div>
+      </>);
 };
 
 export default Menu;
